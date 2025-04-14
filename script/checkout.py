@@ -13,7 +13,7 @@ def checkout_skia(commit):
     subprocess.check_call(["git", "fetch", "origin"])
   else:
     print("> Cloning")
-    subprocess.check_call(["git", "clone", "--config", "core.autocrlf=input", "https://github.com/JetBrains/skia.git", "--quiet"])
+    subprocess.check_call(["git", "clone", "--config", "core.autocrlf=input", "https://github.com/Thomas-Vos/skia.git", "--quiet"]) # TODO: fork
     os.chdir("skia")
     subprocess.check_call(["git", "fetch", "origin"])
 
@@ -59,7 +59,7 @@ def main():
   if not match:
     raise Exception('Expected --version "m<ver>-<sha>", got "' + args.version + '"')
 
-  commit = match.group(2)
+  commit = "1776be560e3bc2242aa72b9d33fbf55b02ad604c" # TODO: match.group(2)
   checkout_skia(commit)
 
   # git deps
