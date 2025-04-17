@@ -72,7 +72,8 @@ def main():
         args += [
             'skia_gl_standard="gles"',
             'skia_use_egl=true',
-            'extra_cflags_cc=["-fno-exceptions", "-fno-rtti", "-flax-vector-conversions=all", "-D_GLIBCXX_USE_CXX11_ABI=0"]',
+            'extra_cflags_cc=["-fPIC", "-fno-exceptions", "-fno-rtti", "-flax-vector-conversions=all", "-D_GLIBCXX_USE_CXX11_ABI=0"]',
+            'extra_cflags=["-fPIC"]',
             'cc="clang"',
             'cxx="clang++"',
         ]
