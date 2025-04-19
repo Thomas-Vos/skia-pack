@@ -37,8 +37,9 @@ def main():
     'skia_use_system_harfbuzz=false',
     'skia_pdf_subset_harfbuzz=true',
     'skia_use_system_icu=false',
-    'skia_use_icu = false',
-    'skia_use_client_icu = true',
+    'skia_use_icu=false',
+    'skia_use_client_icu=true',
+    'skia_use_libgrapheme=true',
     'skia_enable_skottie=true',
     'skia_use_egl=true'
   ]
